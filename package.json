@@ -67,7 +67,8 @@
     "publish-please": "publish-please",
     "test": "nyc --reporter=lcov --require ts-node/register mocha test/**/*.test.ts --reporter spec --retries 3 --require 'node_modules/reflect-metadata/Reflect.js' --exit",
     "test:browser": "browserify ./test/inversify.test.ts -p [ tsify --noImplicitAny ] > ./test/bundle.test.js && karma start",
-    "update": "updates --update --minor && npm install"
+    "update": "updates --update --minor && npm install",
+    "test:play": "nyc --reporter=lcov --require ts-node/register mocha test/play.test.ts --reporter spec --retries 3 --require 'node_modules/reflect-metadata/Reflect.js' --exit"
   },
   "sideEffects": false,
   "types": "lib/inversify.d.ts",
